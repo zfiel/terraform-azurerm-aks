@@ -58,6 +58,12 @@ variable "oidc_issuer_enabled" {
   default     = false
 }
 
+variable "workload_identity_enabled" {
+  description = "Whether Azure AD Workload Identity should be enabled for the cluster. `oidc_issuer_enabled` must be set to true to use this feature."
+  type        = bool
+  default     = false
+}
+
 variable "http_application_routing_enabled" {
   description = "Whether HTTP Application Routing is enabled."
   type        = bool
